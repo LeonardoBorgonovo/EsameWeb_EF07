@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <style href="style.css"></style>
+    <script src="script.js"></script>
+</head>
+
+
+<body>
+
+    <h1 class="mainTitle">Task Manager</h1>
+
+    <div id="inputTask">
+        <input type="text" id="taskInput" placeholder="Inserisci un'attività">
+        <button onclick="addTask()">Aggiungi</button> 
+    </div>
+
+    <div id="taskList">
+        
+        <h2> Elenco Attività</h2>
+
+    <label>Filtra per stato</label>
+
+    <select id="filterSelect" onchange="filterTasks()">
+        <option value="all">Tutti</option>
+        <option value="todo">Da fare</option>
+        <option value="inprogress">In corso</option>
+        <option value="done">Fatti</option>
+    </select>
+
+    <input type="text" id="searchInput" placeholder="Cerca per nome" oninput="renderTasks()">
+    <div id="taskList"></div>
+
+    </div>
+
+
+
+
+
+</body>
+</html>
