@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🗓️Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>Task Manager</header>
+
+    <div id="taskCreator">
+        <!-- Creazione di un task -->
+        <input type="text" id="task" placeholder="Inserisci un task">
+        <button id="add">Aggiungi</button>
+
+    </div>
+
+    <br><br>
+
+    <div id="taskFinder">
+
+        <!-- Filtro dei task -->
+         <label>Filtra per stato</label>
+            <select id="filter">
+                <option value="all">Tutti</option>
+                <option value="todo">Da fare</option>
+                <option value="inprogress">In corso</option>
+                <option value="done">Fatti</option>
+            </select>
+    </div>
+
+
+</body>
+</html>
