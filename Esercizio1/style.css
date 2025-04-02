@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+
+    background: linear-gradient(to right, #000080, #4040ff);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    font-size: 50px;
+    font-weight: 900;
+    text-shadow: #000000 2px 2px 2px;
+    margin-bottom: 20px;
+}
