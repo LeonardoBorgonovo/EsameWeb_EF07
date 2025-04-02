@@ -16,4 +16,42 @@ header{
     font-weight: 900;
     text-shadow: #000000 2px 2px 2px;
     margin-bottom: 20px;
+
+}
+
+.taskCreator{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+#task-input{
+
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+
+}
+
+#add-task-button{
+
+    padding: 10px 15px;
+    background-color: #5dff51;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+
+}
+
+#add-task-button:hover{
+
+    background-color: #36b53a;
+
 }
