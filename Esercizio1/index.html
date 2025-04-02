@@ -12,6 +12,7 @@
     <header>Task Manager</header>
 
     <div class="taskCreator">
+
         <!-- Creazione di un task -->
         <input type="text" id="task-input" placeholder="Inserisci un'attività...">
         <button id="add-task-button">Aggiungi</button>
@@ -20,26 +21,20 @@
 
     <br><br>
 
-    <div class="taskFilter">
+    <div class="filter-search-container">
+        
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Ricerca attività ">
+        </div>
 
-        <!-- Filtro dei task -->
-         <label>Filtra per stato</label>
-            <select id="filter">
-                <option value="all">Tutti</option>
-                <option value="todo">Da fare</option>
-                <option value="inprogress">In corso</option>
-                <option value="done">Fatti</option>
-            </select>
-
-    </div>
-
-    <br><br>
-
-    <div class="taskFinder">
-
-        <!-- Ricerca di un task -->
-        <input type="text" id="search" placeholder="Cerca attività">
-        <button id="find">Cerca</button>
+        <div class="filter-container">
+            <h3>Filtra per stato:</h3>
+            <label><input type="checkbox" value="completato"> Completato</label><br>
+            <label><input type="checkbox" value="incorso"> In corso</label><br>
+            <label><input type="checkbox" value="dafare"> Da fare</label><br>
+            <button id="apply-filters">Applica</button>
+            <button id="clear-filters">Cancella filtri</button>
+          </div>
 
     </div>
 

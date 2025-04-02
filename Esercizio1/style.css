@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: #dddddd;
 }
 
 header{
@@ -21,6 +22,7 @@ header{
 
 .taskCreator{
 
+    /* Modifica il contenitore del campo di input e del pulsante */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,6 +32,7 @@ header{
 
 #task-input{
 
+    /* Modifica la barra input */
     flex: 1;
     padding: 10px;
     border: 1px solid #cccccc;
@@ -41,8 +44,11 @@ header{
 
 #add-task-button{
 
+    /* Imposta il colore del testo e del bordo del pulsante */
     padding: 10px 15px;
-    background-color: #5dff51;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #4040ff;
     cursor: pointer;
     border: none;
     border-radius: 5px;
@@ -52,6 +58,46 @@ header{
 
 #add-task-button:hover{
 
-    background-color: #36b53a;
+    background-color: #000080; /* Cambia il colore del pulsante al passaggio del mouse */
+
+}
+
+.filter-search-container {
+    display: flex; /* Utilizza Flexbox per disporre i filtri e la ricerca in riga */
+    justify-content: space-between; /* Distribuisce lo spazio tra i filtri e la ricerca */
+    margin-bottom: 20px;
+}
+  
+  .filter-container, .search-container {
+
+    padding: 10px;
+    width: 48%; /* Imposta la larghezza per i filtri e la ricerca */
+    box-sizing: border-box; /* Include padding e bordi nella larghezza */
+    margin-left: 10px;
+}
+  
+  #apply-filters, #clear-filters {
+
+    /* Imposta il colore del testo e del bordo del pulsante */
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+
+}
+  
+  #search-input {
+
+    /* Icona ricerca e modifica barra di ricerca */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-image: url('../images/search-icon.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 30px;
 
 }
