@@ -94,10 +94,11 @@ header{
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    background-image: url('../images/search-icon.jpg');
-    background-size: contain;
+    background-image: url('images/search-icon.png');
+    background-size: 22px;
     background-repeat: no-repeat;
     background-position: left;
+    background-position-x: 5px;
     padding-left: 30px;
 
 }
