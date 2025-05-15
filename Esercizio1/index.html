@@ -3,40 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🗓️Task Manager</title>
+    <title>Gestione Attività</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="container">
+        <h1>Gestione Attività</h1>
 
-    <header>Task Manager</header>
-
-    <div class="taskCreator">
-
-        <!-- Creazione di un task -->
-        <input type="text" id="task-input" placeholder="Inserisci un'attività...">
-        <button id="add-task-button">Aggiungi</button>
-
-    </div>
-
-    <br><br>
-
-    <div class="filter-search-container">
-        
-        <div class="search-container">
-          <input type="text" id="search-input" placeholder="Ricerca attività ">
+        <div class="input-section">
+            <input type="text" id="new-task" placeholder="Aggiungi una nuova attività">
+            <button id="add-task-btn">Aggiungi</button>
         </div>
 
-        <div class="filter-container">
-            <h3>Filtra per stato:</h3>
-            <label><input type="checkbox" value="completato"> Completato</label><br>
-            <label><input type="checkbox" value="incorso"> In corso</label><br>
-            <label><input type="checkbox" value="dafare"> Da fare</label><br>
-            <button id="apply-filters">Applica</button>
-            <button id="clear-filters">Cancella filtri</button>
-          </div>
+        <div class="filter-section">
+            <label for="filter-status">Filtra per stato:</label>
+            <select id="filter-status">
+                <option value="all">Tutti</option>
+                <option value="da-fare">Da Fare</option>
+                <option value="in-corso">In Corso</option>
+                <option value="completata">Completata</option>
+            </select>
 
+            <div class="search-input">
+                <input type="text" id="search-task" placeholder="Cerca attività...">
+            </div>
+        </div>
+
+        <ul id="task-list">
+            </ul>
     </div>
 
+    <script src="app.js"></script>
 </body>
 </html>

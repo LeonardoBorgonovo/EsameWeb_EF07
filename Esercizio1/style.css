@@ -1,104 +1,189 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #dddddd;
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
 }
 
-header{
-
-    background: linear-gradient(to right, #000080, #4040ff);
-    color: #ffffff;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
     text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: Helvetica;
-    font-size: 50px;
-    font-weight: 900;
-    text-shadow: #000000 2px 2px 2px;
+    color: #333;
     margin-bottom: 20px;
-
 }
 
-.taskCreator{
-
-    /* Modifica il contenitore del campo di input e del pulsante */
+.input-section, .filter-section {
+    margin-bottom: 20px;
     display: flex;
-    justify-content: center;
+    gap: 10px;
     align-items: center;
-    margin-bottom: 20px;
-
 }
 
-#task-input{
+.filter-section > div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 
-    /* Modifica la barra input */
-    flex: 1;
+.input-section input[type="text"] {
+    flex-grow: 1;
     padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    margin-right: 10px;
-    margin-left: 10px;
-
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-#add-task-button{
-
-    /* Imposta il colore del testo e del bordo del pulsante */
+.input-section button {
     padding: 10px 15px;
-    color: #ffffff;
-    font-weight: bold;
-    background-color: #4040ff;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    margin-right: 10px;
-
-}
-
-#add-task-button:hover{
-
-    background-color: #000080; /* Cambia il colore del pulsante al passaggio del mouse */
-
-}
-
-.filter-search-container {
-    display: flex; /* Utilizza Flexbox per disporre i filtri e la ricerca in riga */
-    justify-content: space-between; /* Distribuisce lo spazio tra i filtri e la ricerca */
-    margin-bottom: 20px;
-}
-  
-  .filter-container, .search-container {
-
-    padding: 10px;
-    width: 48%; /* Imposta la larghezza per i filtri e la ricerca */
-    box-sizing: border-box; /* Include padding e bordi nella larghezza */
-    margin-left: 10px;
-}
-  
-  #apply-filters, #clear-filters {
-
-    /* Imposta il colore del testo e del bordo del pulsante */
-    background-color: #4CAF50;
+    background-color: #5cb85c;
     color: white;
-    padding: 5px 10px;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-
 }
-  
-  #search-input {
+
+.input-section button:hover {
+    background-color: #4cae4c;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+#task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#task-list li:last-child {
+    border-bottom: none;
+}
+
+#search-task {
 
     /* Icona ricerca e modifica barra di ricerca */
+    display: flex;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     background-image: url('images/search-icon.png');
-    background-size: 22px;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
-    background-position-x: 5px;
     padding-left: 30px;
 
+}
+
+.task-details {
+    flex-grow: 1;
+}
+
+.task-name {
+    font-weight: bold;
+}
+
+.task-status {
+    margin-left: 10px;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.da-fare {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.in-corso {
+    background-color: #5bc0de;
+    color: white;
+}
+
+.completata {
+    background-color: #5cb85c;
+    color: white;
+    text-decoration: line-through;
+}
+
+.actions button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.actions .edit-btn {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.actions .edit-btn:hover {
+    background-color: #eea236;
+}
+
+.actions .delete-btn {
+    background-color: #d9534f;
+    color: white;
+}
+
+.actions .delete-btn:hover {
+    background-color: #c9302c;
+}
+
+.actions select {
+    margin-left: 5px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.editing {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.editing input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.editing button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.editing .save-btn {
+    background-color: #5cb85c;
+    color: white;
+}
+
+.editing .save-btn:hover {
+    background-color: #4cae4c;
+}
+
+.editing .cancel-btn {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.editing .cancel-btn:hover {
+    background-color: #eea236;
 }
