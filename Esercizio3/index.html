@@ -14,10 +14,20 @@
     </div>
 
     <div class="input-cords">
-        <label for="latitude">Latitudine:</label>
+        <label for="latitude" id="Latitudine">Latitudine: </label>
         <input type="number" id="latitude" name="latitude" placeholder="Es: 40.1234">
-        <label for="longitude">Longitudine:</label>
+        <label for="longitude" id="Longitudine">Longitudine: </label>
         <input type="number" id="longitude" name="longitude" placeholder="Es: 12.5342">
     </div>
+
+    <div class="weather-button">
+        <button onclick="getWeather()" id="w-button"> Ottieni le previsioni Meteo</button>
+    </div>
+
+    <div class="weather-output">
+        <p id="weather-info">Inserisci latitudine e longitudine per visualizzare il meteo</p>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
