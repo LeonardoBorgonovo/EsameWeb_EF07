@@ -1,48 +1,63 @@
-body{
+body {
     background-color: #f5f5cf;
     margin: 0 auto;
 }
 
-.title{
-    background: linear-gradient(90deg,#020024 0%, #090979 35%, #00D4FF 100%);
+h1,
+h2,
+h3,
+p,
+div {
+    /*reset*/
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+.title {
+    background: linear-gradient(90deg, #020024 0%, #090979 35%, #00D4FF 100%);
     border: none;
     margin: 0 auto;
     padding: 20px;
     border-radius: 0px 0px 1000px 1000px;
-    background-size: 100% 100%;  
+    background-size: 100% 100%;
 }
 
-#title-text{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+#title-text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 100px;
     text-align: center;
     vertical-align: auto;
     color: #ffffff;
 }
 
-.input-cords{
+.input-cords {
     padding-top: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#Latitudine, #Longitudine{
+#Latitudine,
+#Longitudine {
 
     font-size: 20px;
-    padding:10px;
+    padding: 10px;
 }
 
-#latitude, #longitude{
+#latitude,
+#longitude {
     box-sizing: border-box;
     border-radius: 5px;
-    border-color:#8a8a8a;
+    border-color: #8a8a8a;
     padding: 10px;
     font-size: 15px;
 
 }
 
-.weather-button{
+.weather-button {
     /*div bottone ottieni meteo*/
     display: flex;
     align-items: center;
@@ -50,13 +65,7 @@ body{
     margin-top: 50px;
 }
 
-.weather-output{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#w-button{
+#w-button {
     /*bottone ottieni meteo*/
     display: flex;
     padding: 8px;
@@ -73,3 +82,31 @@ body{
     font-size: 15px;
 }
 
+.weather-output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.weather-output h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 0;
+    color: #333;
+}
+
+.weather-output p {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+#weather-info {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 2px 2px 5px #ccc;
+}
