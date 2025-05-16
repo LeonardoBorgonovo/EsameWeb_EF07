@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cronometro Digitale</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
+    <h1>Cronometro Digitale</h1>
+
+    <div id="timer">00:00:00</div>
+
+    <div>
+        <button id="startButton">Avvia</button>
+        <button id="stopButton" disabled>Ferma</button>
+        <button id="resetButton">Reset</button>
+        <button id="lapButton" disabled>Giro</button>
+    </div>
+
+    <h2>Giri</h2>
+    <ul id="laps-list">
+    </ul>
+    <script src="app.js"></script>
 </body>
+
 </html>
