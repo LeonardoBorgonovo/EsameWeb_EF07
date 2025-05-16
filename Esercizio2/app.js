@@ -10,6 +10,13 @@ const resetButton = document.getElementById('resetButton');
 const lapButton = document.getElementById('lapButton');
 const lapsList = document.getElementById('laps-list');
 
+
+/**
+ * Formatta un tempo in millisecondi in una stringa "mm:ss:ms".
+ * @param {number} milliseconds - Il tempo in millisecondi da formattare.
+ * @returns {string} Una stringa che rappresenta il tempo formattato (es. "01:30:25").
+ */
+
 function formatTime(milliseconds) {
     const totalSeconds = Math.floor(milliseconds / 1000);
     const minutes = Math.floor(totalSeconds / 60);
@@ -23,11 +30,22 @@ function formatTime(milliseconds) {
     return `${mm}:${ss}:${mss}`;
 }
 
+/**
+ * Aggiorna la visualizzazione del timer con il tempo trascorso dall'avvio.
+ * Utilizza la variabile globale `startTime` per calcolare il tempo trascorso.
+ */
+
 function updateTimer() {
     const currentTime = Date.now();
     const elapsedTime = currentTime - startTime;
     timerDisplay.textContent = formatTime(elapsedTime);
 }
+
+/**
+ * Aggiunge un listener per l'evento 'click' al pulsante di avvio.
+ * Avvia il cronometro se non è già in esecuzione, impostando un intervallo per aggiornare il timer ogni 10 millisecondi.
+ * Abilita/disabilita i pulsanti appropriati.
+ */
 
 startButton.addEventListener('click', () => {
     if (!running) {
@@ -40,6 +58,12 @@ startButton.addEventListener('click', () => {
     }
 });
 
+/**
+ * Aggiunge un listener per l'evento 'click' al pulsante di stop.
+ * Ferma il cronometro se è in esecuzione, cancellando l'intervallo del timer.
+ * Abilita/disabilita i pulsanti appropriati.
+ */
+
 stopButton.addEventListener('click', () => {
     if (running) {
         clearInterval(timerInterval);
@@ -49,6 +73,12 @@ stopButton.addEventListener('click', () => {
         lapButton.disabled = true;
     }
 });
+
+/**
+ * Aggiunge un listener per l'evento 'click' al pulsante di reset.
+ * Ferma il cronometro, resetta la visualizzazione del timer, la variabile `startTime`, lo stato `running` e la lista dei lap.
+ * Abilita/disabilita i pulsanti allo stato iniziale.
+ */
 
 resetButton.addEventListener('click', () => {
     clearInterval(timerInterval);
@@ -61,6 +91,11 @@ resetButton.addEventListener('click', () => {
     stopButton.disabled = true;
     lapButton.disabled = true;
 });
+
+/**
+ * Aggiunge un listener per l'evento 'click' al pulsante di lap.
+ * Se il cronometro è in esecuzione, registra il tempo corrente come un lap, lo aggiunge all'array `laps` e lo visualizza nella lista dei lap.
+ */
 
 lapButton.addEventListener('click', () => {
     if (running) {

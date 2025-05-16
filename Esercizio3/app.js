@@ -1,3 +1,11 @@
+/**
+ * Recupera i dati meteo attuali dall'API di Open-Meteo per le coordinate specificate
+ * e aggiorna l'interfaccia utente con le informazioni ricevute.
+ * @async
+ * @function getWeather
+ * @returns {void}
+ */
+
 async function getWeather() {
   const latitudine = document.getElementById("latitude").value;
   const longitudine = document.getElementById("longitude").value;
@@ -39,6 +47,12 @@ async function getWeather() {
     console.error("Errore durante la chiamata API:", error);
     weatherInfoDiv.textContent = "Errore durante il recupero dei dati meteo. Riprova più tardi.";
   }
+
+  /**
+ * Restituisce una descrizione testuale in italiano per un dato codice meteo.
+ * @param {number} weatherCode - Il codice meteo numerico fornito dall'API.
+ * @returns {string} Una descrizione testuale delle condizioni meteorologiche.
+ */
 
   function getWeatherDescription(weatherCode) {
     switch (weatherCode) {

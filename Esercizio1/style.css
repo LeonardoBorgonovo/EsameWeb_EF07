@@ -32,6 +32,21 @@ h1 {
     align-items: center;
 }
 
+#filter-status {
+     display: flex;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-image: url('../images/filter-icon.png');
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position-x: 5px;
+    background-position-y: center;
+    padding-left: 30px;
+    font-size: 15px;
+}
+
 .input-section input[type="text"] {
     flex-grow: 1;
     padding: 10px;
@@ -69,20 +84,27 @@ h1 {
     border-bottom: none;
 }
 
+.search-input{
+    width: 100%;
+    flex-grow: 1;
+}
+
 #search-task {
 
     /* Icona ricerca e modifica barra di ricerca */
-    display: flex;
+    
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     background-image: url('../images/search-icon.png');
-    background-size: contain;
+    background-size: 25px;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position-x: 5px;
+    background-position-y: center;
     padding-left: 30px;
-
+    font-size: 15px;
+    width: 100%;
 }
 
 .task-details {
