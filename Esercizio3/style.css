@@ -1,0 +1,28 @@
+body{
+    background-color: #f5f5cf;
+    margin: 0 auto;
+}
+
+.title{
+    background: linear-gradient(90deg,#020024 0%, #090979 35%, #00D4FF 100%);
+    border: none;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 0px 0px 1000px 1000px;
+    background-size: 100% 100%;  
+}
+
+#title-text{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100px;
+    text-align: center;
+    vertical-align: auto;
+    color: #ffffff;
+}
+
+.input-cords{
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
