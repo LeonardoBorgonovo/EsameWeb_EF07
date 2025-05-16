@@ -22,3 +22,53 @@ function formatTime(milliseconds) {
 
     return `${mm}:${ss}:${mss}`;
 }
+
+function updateTimer() {
+    const currentTime = Date.now();
+    const elapsedTime = currentTime - startTime;
+    timerDisplay.textContent = formatTime(elapsedTime);
+}
+
+startButton.addEventListener('click', () => {
+    if (!running) {
+        startTime = Date.now() - (startTime ? (Date.now() - startTime) : 0);
+        timerInterval = setInterval(updateTimer, 10); // Aggiorna ogni 10 millisecondi per mostrare i centesimi
+        running = true;
+        startButton.disabled = true;
+        stopButton.disabled = false;
+        lapButton.disabled = false;
+    }
+});
+
+stopButton.addEventListener('click', () => {
+    if (running) {
+        clearInterval(timerInterval);
+        running = false;
+        startButton.disabled = false;
+        stopButton.disabled = true;
+        lapButton.disabled = true;
+    }
+});
+
+resetButton.addEventListener('click', () => {
+    clearInterval(timerInterval);
+    timerDisplay.textContent = '00:00:00';
+    startTime = null;
+    running = false;
+    laps = [];
+    lapsList.innerHTML = '';
+    startButton.disabled = false;
+    stopButton.disabled = true;
+    lapButton.disabled = true;
+});
+
+lapButton.addEventListener('click', () => {
+    if (running) {
+        const currentTime = Date.now();
+        const elapsedTime = currentTime - startTime;
+        laps.push(formatTime(elapsedTime));
+        const listItem = document.createElement('li');
+        listItem.textContent = formatTime(elapsedTime);
+        lapsList.appendChild(listItem);
+    }
+});
